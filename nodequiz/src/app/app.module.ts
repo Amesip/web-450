@@ -12,10 +12,27 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { PresentationsComponent } from './presentations/presentations.component';
+import { ResultsComponent } from './results/results.component';
+import { QuizSelectionComponent } from './quiz-selection/quiz-selection.component';
+import { RouterModule, Routes } from '@angular/router'
+
+const routes: Routes = [
+  { path: 'presentations', component: PresentationsComponent },
+  { path: 'quiz-selection', component: QuizSelectionComponent },
+  { path: 'quizzes', component: QuizzesComponent },
+  { path: 'results', component: ResultsComponent}
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuizzesComponent,
+    PresentationsComponent,
+    ResultsComponent,
+    QuizSelectionComponent,
+    RouterModule.forRoot(routes, {useHash: true })
   ],
   imports: [
     BrowserModule,
