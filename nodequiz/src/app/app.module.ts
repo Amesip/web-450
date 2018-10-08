@@ -17,6 +17,8 @@ import { PresentationsComponent } from './presentations/presentations.component'
 import { ResultsComponent } from './results/results.component';
 import { QuizSelectionComponent } from './quiz-selection/quiz-selection.component';
 import { RouterModule, Routes } from '@angular/router'
+import { MatTableModule } from "@angular/material";
+import { MatRadioModule } from "@angular/material/radio"
 
 const routes: Routes = [
   { path: 'presentations', component: PresentationsComponent },
@@ -31,8 +33,7 @@ const routes: Routes = [
     QuizzesComponent,
     PresentationsComponent,
     ResultsComponent,
-    QuizSelectionComponent,
-    RouterModule.forRoot(routes, {useHash: true })
+    QuizSelectionComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,10 @@ const routes: Routes = [
     MatIconModule,
     MatMenuModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    MatTableModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

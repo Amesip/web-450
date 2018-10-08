@@ -1,4 +1,4 @@
-<table mat-table class="mat-elevation-z8">
+<mat-table mat-table class="mat-elevation-z8">
 
   <!-- Title Column -->
   <ng-container matColumnDef="title">
@@ -11,20 +11,44 @@
   <!-- Presentation Column -->
   <ng-container matColumnDef="presentation">
     <th mat-header-cell *matHeaderCellDef> Presentation </th>
-    <td mat-cell *matCellDef="let element" a href="../presentations/nodequiz-presentations/presentations.component.html/Microservices-presentation.mp4" class="presentation"> View Presentation </td>
-    <td mat-cell *matCellDef="let element" a href="../presentations/nodequiz-presentations/presentations.component.html/SOAP-presentation.mp4" class="presentation"> View Presentation </td>
-    <td mat-cell *matCellDef="let element" a href="../presentations/nodequiz-presentations/presentations.component.html/OAuth-presentation.mp4" class="presentation"> View Presentation </td>
+    <td mat-cell *matCellDef="let element">
+      <a routerLink="../presentations/nodequiz-presentations/presentations.component.html/Microservices-presentation.mp4">
+        View Presentation
+      </a>
+    </td>
+    <td mat-cell *matCellDef="let element">
+      <a routerLink="../presentations/nodequiz-presentations/presentations.component.html/SOAP-presentation.mp4">
+        View Presentation
+      </a>
+    </td>
+    <td mat-cell *matCellDef="let element">
+      <a routerLink="../presentations/nodequiz-presentations/presentations.component.html/OAuth-presentation.mp4">
+        View Presentation
+      </a>
+    </td>
   </ng-container>
 
   <!-- Quiz Column -->
   <ng-container matColumnDef="quiz">
     <th mat-header-cell *matHeaderCellDef> Quiz </th>
-    <td mat-cell *matCellDef="let element"> Take Quiz! </td>
-    <td mat-cell *matCellDef="let element"> Take Quiz! </td>
-    <td mat-cell *matCellDef="let element"> Take Quiz! </td>
+    <td mat-cell *matCellDef="let element">
+      <a routerLink="../quizzes/{{quiz.id}}">
+        Take Quiz!
+      </a>
+    </td>
+    <td mat-cell *matCellDef="let element">
+      <a routerLink="../quizzes/{{quiz.id}}">
+        Take Quiz!
+      </a>
+    </td>
+    <td mat-cell *matCellDef="let element">
+      <a routerLink="../quizzes/{{quiz.id}}">
+        Take Quiz!
+      </a>
+    </td>
   </ng-container>
 
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

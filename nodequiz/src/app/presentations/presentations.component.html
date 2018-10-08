@@ -1,3 +1,45 @@
-<p>
-  presentations works!
-</p>
+<div *ngIf="router.url == '/nodequiz-presentations/Microservices-presentation'">
+    <mat-card>
+    
+      <h1>Microservices Presentation</h1>
+      
+      <div *ngFor="let presentation">
+        <img class="container" [src]="slide.slide">
+      </div>
+      <button mat-raised-button>Next</button>
+      <button mat-raised-button>Previous</button>
+      <button routerLink='/quiz/1' mat-raised-button>Take Quiz!</button>
+    </mat-card>
+  
+  </div>
+  
+  <div *ngIf="router.url == '/nodequiz-presentations/SOAP-presentation'">
+  
+    <mat-card>
+    <h1>SOAP Presentation</h1>
+  
+      <div *ngFor="let presentation">
+        <img [src]="slide.slide">
+      </div>
+      <button mat-raised-button>Next</button>
+      <button mat-raised-button>Previous</button>
+      <button routerLink='/quiz/2' mat-raised-button>Take Quiz!</button>
+    </mat-card>
+  
+  </div>
+  
+  
+  <div *ngIf="router.url == '/nodequiz-presentations/OAuth-presentation'">
+    <mat-card>
+    <h1>OAuth Presentation</h1>
+  
+    <div *ngFor="let presentation">
+        <img [src]="slide.slide">
+      </div>
+      <button mat-raised-button>Next</button>
+      <button mat-raised-button>Previous</button>
+      <button routerLink='/quiz/3' mat-raised-button>Take Quiz!</button>
+  
+    </mat-card>
+  
+  </div>
