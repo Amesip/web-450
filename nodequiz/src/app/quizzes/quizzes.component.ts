@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-quizzes',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizzesComponent implements OnInit {
 
-  constructor() { }
+  onSubmit(value: any) {
+      console.log(value)
+  }
+  questions: any;
+  constructor(private router: Router, private http: HttpClient) { 
+  }
 
   ngOnInit() {
   }

@@ -1,15 +1,21 @@
+<mat-card class="announcement">
+  <div class="quizTitle">{{title}}</div>
+</mat-card>
+
 <mat-card class="qz-container">
   <div class="qn-container">
     <div *ngFor="let item of quiz; let i = index" class="question">
       <div class="question-text">Question {{i + 1}}: {{item.question}}</div>
       <div *ngFor="let answer of item.answers; let num = index" class="answer">
-        <mat-radio-button class="answer-radio">{{answer['a' + num]}}</mat-radio-button>
+        <mat-radio-group>       
+          <mat-radio-button name="first" [value]= "answer['0' + i]" >{{ answer.answer0 }}</mat-radio-button>  <br>
+          <mat-radio-button name="second" [value]="answer['1' + i]" >{{ answer.answer1 }}</mat-radio-button>  <br>
+          <mat-radio-button name="third" [value]="answer['2' + i]" >{{ answer.answer2 }}</mat-radio-button>  <br>
+          <mat-radio-button name="fourth" [value]="answer['3' + i]" >{{ answer.answer3 }}</mat-radio-button>  <br>
+      </mat-radio-group> 
       </div>
     </div>
 
   </div>
-</mat-card>
-
-<mat-card class="announcement">
-  <div class="quizTitle">{{title}}</div>
+  <mat-raised-button>SUBMIT</mat-raised-button>
 </mat-card>
