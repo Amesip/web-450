@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-composer-list',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComposerListComponent implements OnInit {
 
-  constructor() { }
+  composers: any;
+
+  constructor(private http: HttpClient) {
+    this.http.get('/api/composers/list').subscribe(data => {
+      this.composers = data;
+    });
+   }
+  
 
   ngOnInit() {
   }
