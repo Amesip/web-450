@@ -9,6 +9,9 @@ import { ComposerDetailComponent } from './composer-detail/composer-detail.compo
 import { ComposerDeleteComponent } from './composer-delete/composer-delete.component';
 import { ComposerCreateComponent } from './composer-create/composer-create.component';
 import { HeaderComponent } from './header/header.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(AppRoutes, {useHash: true, enableTracing: false})
+    RouterModule.forRoot(AppRoutes, {useHash: true, enableTracing: false}),
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
