@@ -8,11 +8,11 @@ config.web.secret = 'topsecret';
  * Development database configurations
  *
  */
-config.database = {mongodb};
-config.database.username = 'Amesip';
-config.database.password = 'SopLib5395';
+config.database = {};
+config.database.username = 'admin';
+config.database.password = 'admin123';
 config.database.port = '37003';
-config.database.url = 'mongodb://Amesip:SopLib5395@ds137003.mlab.com:37003/famous-composers';
+config.database.url = 'mongodb://admin:admin123@ds137003.mlab.com:37003/famous-composers';
 config.database.name = 'famous-composers';
 
 

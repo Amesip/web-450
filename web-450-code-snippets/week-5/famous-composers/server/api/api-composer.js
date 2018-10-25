@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var composer = require ('../mongoose-models/composer');
-var firstName = req.body.firstName;
-var lastName = req.body.lastName;
 
 
 router.get('/list', function(req, res) {
