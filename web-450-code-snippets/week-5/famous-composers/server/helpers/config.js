@@ -12,7 +12,7 @@ config.database = {};
 config.database.username = 'admin';
 config.database.password = 'admin123';
 config.database.port = '37003';
-config.database.url = 'mongodb://admin:admin123@ds137003.mlab.com:37003/famous-composers';
+config.database.url = 'ds137003.mlab.com/';
 config.database.name = 'famous-composers';
 
 
