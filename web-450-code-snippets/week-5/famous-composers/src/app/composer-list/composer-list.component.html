@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Famous Composers</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../../styles.css" />
-</head>
-
-<a [routerLink]="['/process' {{ composer.Composer }}]">Create New Composer</a>
+<a [routerLink]="['create']">Create New Composer</a>
 
 <table class="table table‐hover">
   <thead class="thead‐dark">
@@ -22,7 +8,8 @@
       <th>Music Genre</th>
       <th>Functions</th>   
     </tr>
-        <!----create button-->
+        
+    <!----create button-->
   </thead>
       <tbody *ngFor="let composer of composers">
         <tr>
@@ -37,8 +24,8 @@
       </td> 
       <td>
         <!--edit and delete buttons-->
-        <a [routerLink]="['/detail' {{ composer._id }}]">Edit</a>
-        <a [routerLink]="['/delete' {{ composer._id }}]">Delete</a>
+        <a [routerLink]="['/detail', composer._id]">Edit</a>
+        <a [routerLink]="['/delete', composer._id]">Delete</a>
       </td>
     </tr>
         </tbody>
