@@ -22,7 +22,7 @@
         {{ composer.musicGenre }}
       </td> 
       <td>
-        <a [routerLink]="['/delete' {{ composer._id }}]">Delete</a>
+        <a [routerLink]="['/delete', composer._id]">Delete</a>
       </td>
     </tr>
   </tbody>

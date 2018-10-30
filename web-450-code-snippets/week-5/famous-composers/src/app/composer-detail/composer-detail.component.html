@@ -22,7 +22,7 @@
         {{ composer.musicGenre }}
       </td> 
       <td>
-        <a [routerLink]="['/detail' {{ composer._id }}]">Edit</a>
+        <a [routerLink]="['/detail', composer._id]">Edit</a>
       </td>
     </tr>
   </tbody>
