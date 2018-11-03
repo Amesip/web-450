@@ -19,4 +19,4 @@ var Composer = mongoose.model("Composer", composerSchema);
 
 // expose the composer to calling files
 
-module.exports = {Composer: Composer};
+module.exports = Composer

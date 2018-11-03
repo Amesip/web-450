@@ -3,7 +3,7 @@ var router = express.Router();
 var composer = require ('../mongoose-models/composer');
 
 
-router.get('/list', function(req, res) {
+router.get('/list', function(req, res, next) {
   composer.find(function(err, composers) {
     if (err) return next (err);
     res.json(composers);

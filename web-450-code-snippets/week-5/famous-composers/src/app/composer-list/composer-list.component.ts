@@ -11,8 +11,9 @@ export class ComposerListComponent implements OnInit {
   composers: any;
 
   constructor(private http: HttpClient) {
-    this.http.get('/api/composers/list').subscribe(data => {
+    this.http.get('/api/composer/list').subscribe(data => {
       this.composers = data;
+      console.log(data)
     });
    }
   
