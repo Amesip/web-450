@@ -15,11 +15,11 @@ export const AppRoutes: Routes = [
     component: ComposerListComponent
   },
   {
-    path: 'detail',
+    path: 'detail/:id',
     component: ComposerDetailComponent
   },
   {
-    path: 'delete',
+    path: 'delete/:id',
     component: ComposerDeleteComponent
   },
   {
