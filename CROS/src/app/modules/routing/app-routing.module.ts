@@ -11,7 +11,12 @@ import { RegisterComponent } from '../../components/register/register.component'
 import { PasswordResetComponent } from '../../components/password-reset/password-reset.component';
 import { AboutUsComponent } from '../../components/about-us/about-us.component';
 import { ContactComponent } from '../../components/contact/contact.component';
+
+import { OrderComponent } from '../../components/order/order.component';
+import { LogComponent } from '../../components/log/log.component';
+import { StatsComponent } from '../../components/stats/stats.component';
 import { HomepageComponent } from '../../components/homepage/homepage.component';
+
 
 
 const routes: Routes = [
@@ -24,9 +29,12 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'resetpassword', component: PasswordResetComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'logs', component: LogComponent },
+  { path: 'home', component: HomepageComponent },
+  { path: 'stats', component: StatsComponent },
   { path: '404', component: NotFoundComponent },
   { path: '500', component: ServerErrorComponent },
-  { path: 'homepage', component: HomepageComponent },
   { path: '**', redirectTo: '/404' },
 
 ];

@@ -9,6 +9,7 @@ import { UserManagementComponent } from './components/user-management/user-manag
 
 import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -28,42 +29,52 @@ import { RegisterComponent } from './components/register/register.component';
 import { PasswordResetComponent } from './components/password-reset/password-reset.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { OrderComponent } from './components/order/order.component';
+import { LogComponent } from './components/log/log.component';
+import { StatsComponent } from './components/stats/stats.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    LoginComponent,
-    SecurityQuestionsComponent,
-    UserManagementComponent,
-    DashboardComponent,
-    NotFoundComponent,
-    ServerErrorComponent,
-    RegisterComponent,
-    PasswordResetComponent,
-    AboutUsComponent,
-    ContactComponent,
-    HomepageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatCardModule,
-    MatInputModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    FormsModule,
-    FlexLayoutModule,
-    MatTooltipModule,
-    MatTableModule,
-    MatTooltipModule,
-    MatExpansionModule,
-    MatSelectModule,
-    MatStepperModule,
-    MatProgressBarModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        LoginComponent,
+        SecurityQuestionsComponent,
+        UserManagementComponent,
+        DashboardComponent,
+        NotFoundComponent,
+        ServerErrorComponent,
+        RegisterComponent,
+        PasswordResetComponent,
+        AboutUsComponent,
+        ContactComponent,
+        OrderComponent,
+        LogComponent,
+        StatsComponent,
+        HomepageComponent
+
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatCardModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        FormsModule,
+        FlexLayoutModule,
+        MatTooltipModule,
+        MatTableModule,
+        MatTooltipModule,
+        MatExpansionModule,
+        MatSelectModule,
+        MatStepperModule,
+        MatProgressBarModule,
+        ChartsModule
+
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
