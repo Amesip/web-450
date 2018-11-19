@@ -2,13 +2,15 @@
   <mat-card class="create-panel frm-create-panel">
     <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
 
-      <div>First Name: <input type="text" name="firstName" ngModel></div>
+      <div>First Name: <input type="text" #composerName="firstName" ngModel></div>
     
-      <div>Last Name: <input type="text" name="lastName" ngModel></div>
+      <div>Last Name: <input type="text" #composerName="lastName" ngModel></div>
 
-      <div>Music Genre: <input type="text" name="musicGenre" ngModel></div>
+      <div>Music Genre: <input type="text" #composerName="musicGenre" ngModel></div>
     
-      <button type="submit" a [routerLink]="['/process', composer._id]">Create</button>
+      <button (click)="add(composerName.value); composerName.value=''">
+        Create
+      </button>
     
     </form>
   </mat-card>

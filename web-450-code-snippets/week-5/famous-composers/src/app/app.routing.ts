@@ -8,22 +8,23 @@ import { ComposerCreateComponent } from './composer-create/composer-create.compo
 export const AppRoutes: Routes = [
   {
     path: '',
+    redirectTo: '/list', 
+    pathMatch: 'full'
+  },
+  {
+    path: '/list',
     component: ComposerListComponent
   },
   {
-    path: 'list',
-    component: ComposerListComponent
-  },
-  {
-    path: 'detail/:id',
+    path: '/detail/:id',
     component: ComposerDetailComponent
   },
   {
-    path: 'delete/:id',
+    path: '/delete/:id',
     component: ComposerDeleteComponent
   },
   {
-    path: 'create',
+    path: '/create',
     component: ComposerCreateComponent
   }
 ];

@@ -22,7 +22,8 @@
         {{ composer.musicGenre }}
       </td> 
       <td>
-        <a [routerLink]="['/delete', composer._id]">Delete</a>
+        <button class="delete" title="delete composer"
+        (click)="delete(composer)">Delete</button>
       </td>
     </tr>
   </tbody>

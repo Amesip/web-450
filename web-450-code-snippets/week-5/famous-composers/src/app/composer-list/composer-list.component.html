@@ -1,4 +1,4 @@
-<a [routerLink]="['create']">Create New Composer</a>
+<a routerLink="/create">Create New Composer</a>
 
 <table class="table table‐hover">
   <thead class="thead‐dark">
@@ -24,9 +24,9 @@
       </td> 
       <td>
         <!--edit and delete buttons-->
-        <a [routerLink]="['detail', composer._id]">Edit</a>
+        <a routerLink="/detail/{{composer.id}}">Edit</a>
       <br>
-        <a [routerLink]="['delete', composer._id]">Delete</a>
+        <a routerLink="/delete/{{composer.id}}">Delete</a>
       </td>
     </tr>
         </tbody>
